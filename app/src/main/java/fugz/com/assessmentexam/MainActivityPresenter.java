@@ -25,10 +25,8 @@ public class MainActivityPresenter {
     }
 
     public void addDataToArray(){
-        if(db.getListString("DATA").size() != 0){
-            dataList = db.getListString("DATA");
-            this.mainView.setItems(dataList);
-        }
+        dataList = db.getListString("DATA");
+        this.mainView.setItems(dataList);
     }
 
     public void addDataToDB(String data){
